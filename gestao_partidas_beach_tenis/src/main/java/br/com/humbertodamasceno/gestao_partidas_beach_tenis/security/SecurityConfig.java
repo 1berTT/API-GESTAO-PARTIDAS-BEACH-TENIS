@@ -25,6 +25,7 @@ public class SecurityConfig {
             csrf.disable();
         }).authorizeHttpRequests((auth) -> {
             auth.requestMatchers("/admin/**").permitAll();
+            auth.requestMatchers("/uploads/avatars/**").permitAll();
             auth.anyRequest().authenticated();
         })
                 .addFilterBefore(securityFilter, BasicAuthenticationFilter.class);
