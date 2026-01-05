@@ -10,7 +10,7 @@ import br.com.humbertodamasceno.gestao_partidas_beach_tenis.modules.player.DTOs.
 import br.com.humbertodamasceno.gestao_partidas_beach_tenis.modules.player.repositories.PlayerRepository;
 
 @Service
-public class LoadUsersUseCase {
+public class LoadPlayersUseCase {
 
     @Autowired
     private PlayerRepository playerRepository;
@@ -24,3 +24,4 @@ public class LoadUsersUseCase {
     }
 
 }
+
