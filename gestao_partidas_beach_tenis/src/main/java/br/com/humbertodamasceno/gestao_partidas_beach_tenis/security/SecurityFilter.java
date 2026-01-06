@@ -29,7 +29,7 @@ public class SecurityFilter extends OncePerRequestFilter {
 
         String header = request.getHeader("Authorization");
 
-        if (request.getRequestURI().contains("/player")) {
+        if (request.getRequestURI().contains("/player") || request.getRequestURI().contains("/match")) {
 
             if (header != null) {
                 var token = this.jwtProvider.validateToken(header);
