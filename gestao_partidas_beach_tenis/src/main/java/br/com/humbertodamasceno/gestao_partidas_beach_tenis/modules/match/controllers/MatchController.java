@@ -22,6 +22,7 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.format.annotation.DateTimeFormat;
 import br.com.humbertodamasceno.gestao_partidas_beach_tenis.modules.match.useCases.ListMatchesUseCase;
 import java.time.LocalDate;
+import br.com.humbertodamasceno.gestao_partidas_beach_tenis.modules.match.DTOs.MatchCreateFormatDTO;
 
 @RestController
 @RequestMapping("/match")
@@ -37,10 +38,10 @@ public class MatchController {
     private ListMatchesUseCase listMatchesUseCase;
 
     @PostMapping("/create")
-    public ResponseEntity<Object> create(@Valid @RequestBody MatchEntity matchEntity) {
+    public ResponseEntity<Object> create(@Valid @RequestBody MatchCreateFormatDTO matchCreateFormatDTO) {
 
         try {
-            var result = this.createMatchUseCase.execute(matchEntity);
+            var result = this.createMatchUseCase.execute(matchCreateFormatDTO);
             return ResponseEntity.ok(result);
 
         } catch (Exception e) {

@@ -7,6 +7,9 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
+import java.util.List;
+
+import br.com.humbertodamasceno.gestao_partidas_beach_tenis.modules.player.DTOs.LoadPlayerDTO;
 
 @Data
 @Builder
@@ -18,5 +21,7 @@ public class LoadMatchDTO {
     private Integer team1Score;
     private Integer team2Score;
     private Integer winnerTeam;
+    private List<LoadPlayerDTO> winnerTeamPlayers;
+    private List<LoadPlayerDTO> loserTeamPlayers;
 
 }
