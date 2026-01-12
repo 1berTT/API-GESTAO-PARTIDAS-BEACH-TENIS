@@ -11,4 +11,6 @@ public interface MatchTeamRepository extends JpaRepository<MatchTeamEntity, UUID
 
     Optional<MatchTeamEntity> findById(UUID id);
 
+    Optional<MatchTeamEntity> findByMatch_IdAndTeamNumber(UUID matchId, Integer teamNumber);
+
 }

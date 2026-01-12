@@ -1,5 +1,6 @@
 package br.com.humbertodamasceno.gestao_partidas_beach_tenis.modules.matchTeamPlayer.repositories;
 
+import java.util.List;
 import java.util.UUID;
 import java.util.Optional;
 
@@ -13,6 +14,6 @@ public interface MatchTeamPlayerRepository extends JpaRepository<MatchTeamPlayer
 
     Optional<MatchTeamPlayerEntity> findByPlayer_Id(UUID playerId);
 
-    Optional<MatchTeamPlayerEntity> findByMatchTeam_Id(UUID matchTeamId);
+    List<MatchTeamPlayerEntity> findByMatchTeam_Id(UUID matchTeamId);
 
 }
